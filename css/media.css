@@ -290,6 +290,7 @@
     .month-scroll__container {
         width: 100vw;
         height: 8vh;
+        border-radius: 0;
     }
 
     .month-scroll__content {

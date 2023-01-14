@@ -195,82 +195,82 @@
 
 }
 
+/*@media (max-width: 776px) {*/
+/*    .month__text {*/
+/*        font-size: 0.125em;*/
+/*    }*/
+
+/*    .upcoming__text {*/
+/*        font-style: normal;*/
+/*        font-weight: 800;*/
+/*        font-size: 0.18em;*/
+/*        text-transform: uppercase;*/
+
+/*        color: #000000;*/
+/*    }*/
+
+/*    .upcoming-event-name {*/
+/*        top: 15px;*/
+/*        left: 15px;*/
+/*        right: 15px;*/
+/*        font-size: 25px;*/
+/*        line-height: 30px;*/
+/*    }*/
+
+/*    .upcoming-data {*/
+/*        bottom: 15px;*/
+/*        left: 15px;*/
+/*        right: 15px;*/
+/*        font-size: 20px;*/
+/*    }*/
+
+/*    .upcoming-description {*/
+/*        font-size: 16px;*/
+/*        line-height: 28px;*/
+
+/*        padding: 15px 15px;*/
+/*    }*/
+
+/*    .soon__text {*/
+/*        font-size: 0.15em;*/
+/*    }*/
+
+/*    .soon-event-name {*/
+/*        top: 15px;*/
+/*        left: 15px;*/
+/*        right: 15px;*/
+
+/*        font-size: 20px;*/
+/*        line-height: 20px;*/
+/*    }*/
+
+/*    .soon-data {*/
+/*        bottom: 15px;*/
+/*        left: 15px;*/
+/*        right: 15px;*/
+
+/*        font-size: 15px;*/
+/*    }*/
+
+/*    .far-events-name {*/
+/*        top: 10px;*/
+/*        left: 10px;*/
+/*        right: 10px;*/
+
+/*        font-size: 15px;*/
+/*        line-height: 18px;*/
+/*    }*/
+
+/*    .far-data {*/
+/*        bottom: 10px;*/
+/*        left: 10px;*/
+/*        right: 10px;*/
+
+/*        font-size: 10px;*/
+/*    }*/
+/*}*/
+
 @media (max-width: 776px) {
-    .month__text {
-        font-size: 0.125em;
-    }
-
-    .upcoming__text {
-        font-style: normal;
-        font-weight: 800;
-        font-size: 0.18em;
-        text-transform: uppercase;
-
-        color: #000000;
-    }
-
-    .upcoming-event-name {
-        top: 15px;
-        left: 15px;
-        right: 15px;
-        font-size: 25px;
-        line-height: 30px;
-    }
-
-    .upcoming-data {
-        bottom: 15px;
-        left: 15px;
-        right: 15px;
-        font-size: 20px;
-    }
-
-    .upcoming-description {
-        font-size: 16px;
-        line-height: 28px;
-
-        padding: 15px 15px;
-    }
-
-    .soon__text {
-        font-size: 0.15em;
-    }
-
-    .soon-event-name {
-        top: 15px;
-        left: 15px;
-        right: 15px;
-
-        font-size: 20px;
-        line-height: 20px;
-    }
-
-    .soon-data {
-        bottom: 15px;
-        left: 15px;
-        right: 15px;
-
-        font-size: 15px;
-    }
-
-    .far-events-name {
-        top: 10px;
-        left: 10px;
-        right: 10px;
-
-        font-size: 15px;
-        line-height: 18px;
-    }
-
-    .far-data {
-        bottom: 10px;
-        left: 10px;
-        right: 10px;
-
-        font-size: 10px;
-    }
-}
-
-@media (max-width: 480px) {
 
     .bp-mobile-enable {
         display: block !important;

@@ -1,272 +1,203 @@
 @import "reset.css";
-@import "month.css";
 @import "upcoming.css";
 @import "soon.css";
+@import "main.css";
 @import "far-events.css";
 
-@media (max-width: 1920px) {
-
-    .upcoming-text__container {
-        height: 15%;
-    }
-
-    .upcoming-event__container {
-        height: 85%;
+@media only screen and (min-width: 1200px){
+    .container {
+        width: 1170px;
     }
 
 }
 
-@media (max-width: 1200px) {
+@media only screen and (min-width: 992px){
+    .container {
+        width: 970px;
+    }}
 
-    .bp-1 {
-        display: none
-    }
-
-    .bp-2 {
-        display: flex !important;
-    }
-
-    .month__button {
-        width: 30%;
-    }
-
-    .month__text {
-        font-size: 0.2em;
-    }
-
-    .month-scroll {
-        width: 85vw;
-        height: 20vh;
-    }
-
-    .month-scroll__container {
-        width: 85vw;
-        height: 10vh;
-    }
-
-    .far__container {
-        width: 48%;
-    }
-
-    .upcoming-text__container {
-        height: 15%;
-    }
-
-    .upcoming-event__container {
-        height: 85%;
-    }
-}
-
-@media (max-width: 960px) {
-    .month-scroll {
-        height: 10vh;
-        width: 100vw;
-    }
-
-    .month-scroll__container {
-        width: 100vw;
-    }
-
-    .month__text {
-        font-size: 0.15em;
+@media only screen and (min-width: 900px){
+    .container {
+        width: 890px;
     }
 
     .upcoming {
-        width: 100vw;
-        height: 95vh;
-    }
-
-    .upcoming__text {
-        font-size: 0.21em;
+        height: 680px;
     }
 
     .upcoming__container {
-        height: 85vh;
-        width: 100vw;
+        grid-template-rows: 52.79% 43%;
+    }
+
+    .event {
+        min-height: 150px;
+        height: 255px !important;
+        width: 47.9%;
     }
 
     .upcoming-event-name {
-        top: 20px;
-        left: 20px;
-        right: 20px;
-        font-size: 35px;
+        font-size: 34px;
+        line-height: 41px;
     }
 
     .upcoming-data {
-        bottom: 20px;
-        left: 20px;
-        right: 20px;
-        font-size: 25px;
-    }
-
-    .event-image {
-        border-radius: 0 !important;
-    }
-
-    .front {
-        border-radius: 0;
-    }
-
-    .back {
-        border-radius: 0;
-    }
-
-    .upcoming-text__container {
-        height: 10%;
-    }
-
-    .upcoming-event__container {
-        height: 90%;
-    }
-
-    .soon-events {
-        width: 100vw;
-        height: 80vh;
-    }
-
-    .soon__text {
-        font-size: 0.18em;
-    }
-
-    .soon-events__container {
-        height: 80vh;
-        width: 100vw;
-    }
-
-    .soon-text__container {
-        height: 10%;
-    }
-
-    .events__container {
-        height: 90%;
+        font-size: 24px;
+        line-height: 29px;
     }
 
     .soon-event-name {
-        top: 20px;
-        left: 20px;
-        right: 20px;
-
-        font-size: 25px;
-        line-height: 25px;
+        font-size: 26px;
+        line-height: 32px;
     }
 
     .soon-data {
-        bottom: 20px;
-        left: 20px;
-        right: 20px;
-
         font-size: 18px;
+        line-height: 22px;
     }
 
-    .far-events {
-        width: 100vw;
-        height: 90vh;
+    .month-button {
+        width: 110px;
     }
 
-    .far-events__container {
-        height: 75vh;
-        width: 100vw;
-    }
-
-    .far-events-text {
-        font-size: 0.15em;
-    }
-
-    .far_Swiper {
-        width: 100%;
-    }
-
-    .flex {
-        height: 90%;
-    }
-
-
-    .far-events-text__container {
-        height: 10%;
-    }
-
-    .far-events-name {
-        top: 15px;
-        left: 15px;
-        right: 15px;
-
+    .month-text {
         font-size: 20px;
-        line-height: 23px;
-
-    }
-
-    .far-data {
-        bottom: 15px;
-        left: 15px;
-        right: 15px;
-
-        font-size: 15px;
-        line-height: 23px;
     }
 
 }
 
-@media (max-width: 776px) {
-
-    .bp-mobile-enable {
-        display: block !important;
+@media (min-width: 1200px){
+    .container {
+        width: 1170px;
     }
 
-    .bp-mobile-disable {
-        display: none !important;
-    }
-
-    .month-scroll {
-        position: fixed;
-        height: 8vh;
-        width: 100vw;
-        z-index: 100;
-    }
-
-    .month-scroll__container {
-        width: 100vw;
-        height: 8vh;
-        border-radius: 0;
-    }
-
-    .month-scroll__content {
-        width:  100%;
-        height: 8vh;
-        margin: 0;
-    }
-
-    .month__text {
-        font-size: 0.11em;
+    .event {
+        width: 31.17%;
+        min-height: 270px;
+        height: 270px !important;
     }
 
     .upcoming {
-        height: 100vh;
+        height: 860px;
     }
 
     .upcoming-event-name {
-        top: 10px;
-        left: 10px;
-        right: 10px;
-        font-size: 20px;
-        line-height: 30px;
+        font-size: 40px;
+        line-height: 47px;
     }
 
     .upcoming-data {
-        bottom: 10px;
-        left: 10px;
-        right: 10px;
-        font-size: 15px;
+        font-size: 30px;
+        line-height: 35px;
     }
 
-    .upcoming-event__container {
-        margin-top: 15px;
+    .soon-event-name {
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    .soon-data {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .month-button {
+        width: 155px;
+    }
+
+    .month-text {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1200px){
+    .container {
+        max-width: 1140px;
+    }}
+
+@media (max-width: 860px){
+    .container {
+        width: 750px;
+    }
+
+    .upcoming {
+        height: 600px;
+    }
+
+    .upcoming__container {
+        grid-template-rows: 52.79% 43%;
+    }
+
+    .month-sorting__container {
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto auto;
+    }
+
+    .month-sorting {
+        margin-top: 50px;
+        height: 223px;
+    }
+
+    .month-button {
+        width: 153px;
+    }
+
+    .event {
+        width: 47.5%;
+        min-height: 230px;
+        height: 230px !important;
+    }
+
+    .upcoming-event-name {
+        top: 30px;
+        left: 30px;
+        right: 30px;
+
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    .upcoming-data {
+        bottom: 30px;
+        left: 30px;
+        right: 30px;
+
+        font-size: 18px;
+        line-height: 23px;
     }
 
     .upcoming-description {
-        font-size: 10px;
-        line-height: 20px;
-
-        padding: 15px 15px;
+        font-size: 20px;
+        line-height: 25px;
     }
 
+    .soon-event-name {
+        top: 25px;
+        left: 25px;
+        right: 25px;
+
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .soon-data {
+        bottom: 25px;
+        left: 25px;
+        right: 25px;
+
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .soon-description {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .event-description {
+        position: relative;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 15px;
+    }
 }

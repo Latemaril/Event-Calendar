@@ -1,95 +1,38 @@
-.month-scroll {
-    position: relative;
-    /*max-width: 1380px;*/
-    width: 85vw;
-    height: 20vh;
-    /*margin-top: 50px;*/
-
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    flex-shrink: 0;
+.month-sorting {
+    margin-top: 50px;
+    height: 136px;
+    width: 100%;
 }
 
-.month-scroll__container {
-    position: relative;
-    width: 85vw;
-    height: 10vh;
-    border-radius: 1vh;
-
-    background: #CCE5FF;
-
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
+.month-sorting__container {
+    height: 100%;
+    display: grid;
+    gap: 36px;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-rows: auto auto;
 }
 
-.month-scroll__content {
-    position: relative;
-    width:  90%;
-    height: 10vh;
-    margin: auto;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-}
-
-.month__blocks {
-    flex-basis: 74.7%;
-    justify-content: space-between;
-}
-
-.swiper-slide {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-basis: 100%;
-}
-
-.month-arrow_left {
-    flex-basis: 12.65%;
-    display: flex;
-    justify-content: flex-start;
-}
-
-.month-arrow_right {
-    flex-basis: 12.65%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.month__button {
-    scroll-snap-align: center;
-    position: relative;
-    width: 22%;
-    height: 6.5vh;
-
+.month-button {
+    height: 50px;
+    width: 155px;
     background: #156BC5;
-    border-radius: 1vh;
-
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+    border-radius: 3px;
 }
 
-.month__button:hover {
-    background: #004491;
+.active-button {
+    background: #f56c00 !important;
 }
 
-.month__text {
-    font-family: "Roboto";
+.month-text {
+    font-family: 'Roboto';
     font-style: normal;
-    font-weight: 500;
-    font-size: 3.5vh;
+    font-weight: 600;
+    font-size: 24px;
     line-height: 28px;
 
     color: #FFFFFF;
 }
 
-
+.cell_disable {
+    display: none;
+}

@@ -115,16 +115,24 @@
     }}
 
 @media (max-width: 860px){
+
+    html, body{
+        min-height: 100%;
+        min-width: 750px;
+        font-family: Roboto;
+        color: black;
+    }
+
+    .typepage {
+        padding-top: 0;
+    }
+
     .container {
         width: 750px;
     }
 
     .upcoming {
-        height: 600px;
-    }
-
-    .upcoming__container {
-        grid-template-rows: 52.79% 43%;
+        display: none;
     }
 
     .month-sorting__container {
@@ -142,62 +150,35 @@
     }
 
     .event {
-        width: 47.5%;
+        width: 100%;
         min-height: 230px;
-        height: 230px !important;
+        height: 350px !important;
     }
 
-    .upcoming-event-name {
+
+    .event-name {
         top: 30px;
         left: 30px;
         right: 30px;
 
-        font-size: 28px;
-        line-height: 35px;
+        font-size: 26px;
+        line-height: 23px;
     }
 
-    .upcoming-data {
+    .event-data {
         bottom: 30px;
         left: 30px;
         right: 30px;
 
         font-size: 18px;
-        line-height: 23px;
-    }
-
-    .upcoming-description {
-        font-size: 20px;
-        line-height: 25px;
-    }
-
-    .soon-event-name {
-        top: 25px;
-        left: 25px;
-        right: 25px;
-
-        font-size: 20px;
-        line-height: 26px;
-    }
-
-    .soon-data {
-        bottom: 25px;
-        left: 25px;
-        right: 25px;
-
-        font-size: 16px;
-        line-height: 22px;
-    }
-
-    .soon-description {
-        font-size: 14px;
-        line-height: 20px;
+        line-height: 19px;
     }
 
     .event-description {
         position: relative;
         font-style: normal;
         font-weight: 400;
-        font-size: 14px;
-        line-height: 15px;
+        font-size: 20px;
+        line-height: 25px;
     }
 }

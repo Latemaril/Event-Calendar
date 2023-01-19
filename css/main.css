@@ -29,10 +29,12 @@ html, body{
 }
 
 .main-content {
+    width: 100%;
     height: auto;
 }
 
 .typepage {
+    width: 100%;
     height: auto;
     padding-top: 50px;
     /*margin-bottom: 30px;*/

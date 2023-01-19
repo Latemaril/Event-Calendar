@@ -7,8 +7,6 @@
     <title>Сайт пивовара</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/media.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -72,6 +70,7 @@
                             </label>
                         </div>
                     </div>
+                    <!--MONTH FILTER-->
                     <div class="month-sorting">
                         <div class="month-sorting__container">
                             <button class="month-button month-text active-button" onclick="toggle_visibility('january', this.id)" id="1">Январь</button>
@@ -88,6 +87,7 @@
                             <button class="month-button month-text" onclick="toggle_visibility('december', this.id)" id="12">Декабрь</button>
                         </div>
                     </div>
+                    <!--EVENTS-->
                     <div class="events">
                         <div class="events__container">
                             <div class="events-list active" style="display: flex" id="january">

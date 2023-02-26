@@ -5,1324 +5,228 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сайт пивовара</title>
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
     <link rel="stylesheet" href="./css/media.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="./js/main.js"></script>
 </head>
 <body>
     <div class="wrapper">
-        <div class="row">
-            <div class="container">
-                <div class="text">
-                    <h1>Афиша событий ВВГУ</h1>
+        <div class="container">
+            <div class="row">
+                <div class="container">
+                    <div class="text">
+                        <h1>Афиша событий ВВГУ</h1>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="main-content" id="main-content">
             <div class="typepage">
-                <div class="container">
+                <div class="container d-flex justify-content-center flex-column">
                     <!--UPCOMING EVENT-->
-                    <div class="upcoming">
-                        <div class="upcoming__container">
-                            <label class="upcoming-event__container area-1">
-                                <input type="checkbox">
-                                <div class="card">
-                                    <div class="front">
-                                        <img src="img/month/january.jpg" alt="" class="event-image">
-                                        <a class="upcoming-event-name">Мандельштамовские чтения</a>
-                                        <a class="upcoming-data">16 Января 2023</a>
-                                    </div>
-                                    <div class="back">
-                                        <div class="upcoming-description__container">
-                                            <a class="upcoming-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                        </div>
+                    <article class="upcoming">
+                        <div class="card front">
+                            <div class="card__container">
+                                <img src="img/month/january.jpg">
+                                <div class="card-content">
+                                    <div class="card-description">
+                                        <h2>Мандельштамовские чтения</h2>
+                                        <p>16 Января 2023</p>
                                     </div>
                                 </div>
-                            </label>
-                            <label class="upcoming-event__container area-2">
-                                <input type="checkbox">
-                                <div class="card">
-                                    <div class="front">
-                                        <img src="img/month/february.JPG" alt="" class="event-image">
-                                        <a class="soon-event-name">День открытых дверей</a>
-                                        <a class="soon-data">19 Февраля 2023</a>
-                                    </div>
-                                    <div class="back">
-                                        <div class="soon-description__container">
-                                            <a class="soon-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </label>
-                            <label class="upcoming-event__container area-3">
-                                <input type="checkbox">
-                                <div class="card">
-                                    <div class="front">
-                                        <img src="img/month/march.jpg" alt="" class="event-image">
-                                        <a class="soon-event-name">Региональный чемпионат «Молодые профессионалы»</a>
-                                        <a class="soon-data">Март 2023</a>
-                                    </div>
-                                    <div class="back">
-                                        <div class="soon-description__container">
-                                            <a class="soon-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </label>
+                            </div>
                         </div>
-                    </div>
-                    <!--MONTH FILTER-->
-                    <div class="month-sorting">
-                        <div class="month-sorting__container">
-                            <button class="month-button month-text active-button" onclick="toggle_visibility('january', this.id)" id="1">Январь</button>
-                            <button class="month-button month-text" onclick="toggle_visibility('february', this.id)" id="2">Февраль</button>
-                            <button class="month-button month-text" onclick="toggle_visibility('march', this.id)" id="3">Март</button>
-                            <button class="month-button month-text" onclick="toggle_visibility('april', this.id)" id="4">Апрель</button>
-                            <button class="month-button month-text" onclick="toggle_visibility('may', this.id)" id="5">Май</button>
-                            <button class="month-button month-text" onclick="toggle_visibility('june', this.id)" id="6">Июнь</button>
-                            <button class="month-button month-text" onclick="toggle_visibility('july', this.id)" id="7">Июль</button>
-                            <button class="month-button month-text" onclick="toggle_visibility('august', this.id)" id="8">Август</button>
-                            <button class="month-button month-text" onclick="toggle_visibility('september', this.id)" id="9">Сентябрь</button>
-                            <button class="month-button month-text" onclick="toggle_visibility('october', this.id)" id="10">Ноябрь</button>
-                            <button class="month-button month-text" onclick="toggle_visibility('november', this.id)" id="11">Октябрь</button>
-                            <button class="month-button month-text" onclick="toggle_visibility('december', this.id)" id="12">Декабрь</button>
+                        <div class="card back">
+                            <p class="">
+                                К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС
+                            </p>
                         </div>
-                    </div>
-                    <!--EVENTS-->
-                    <div class="events">
-                        <div class="events__container">
-                            <div class="events-list active" style="display: flex" id="january">
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/january.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/january.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/january.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/january.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/january.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/january.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/january.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/january.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/january.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/january.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/january.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/january.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
+                    </article>
 
+                    <nav class="month-sorting month-sorting__container">
+                        <button class="month-button">Январь</button>
+                        <button class="month-button is-inactive">Февраль</button>
+                        <button class="month-button">Март</button>
+                        <button class="month-button">Апрель</button>
+                        <button class="month-button">Май</button>
+                        <button class="month-button">Июнь</button>
+                        <button class="month-button">Июль</button>
+                        <button class="month-button">Август</button>
+                        <button class="month-button">Сентябрь</button>
+                        <button class="month-button">Ноябрь</button>
+                        <button class="month-button">Октябрь</button>
+                        <button class="month-button">Декабрь</button>
+
+                    </nav>
+                    <!--EVENTS-->
+                    <div class="events events__container">
+                        <div class="events-list" id="Январь">
+                            <div class="l-card">
+                                <div class="card front">
+                                    <div class="card__container">
+                                        <img src="img/month/january.jpg" alt="">
+                                        <div class="card-content">
+                                            <div class="card-description">
+                                                <h2>Мандельштамовские чтения</h2>
+                                                <p>16 Января 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card back">
+                                    <p class="">
+                                        К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС
+                                    </p>
+                                </div>
                             </div>
-                            <div class="events-list" style="display: none" id="february">
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/february.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
+                            <div class="l-card">
+                                <div class="card front">
+                                    <div class="card__container">
+                                        <img src="img/month/january.jpg" alt="">
+                                        <div class="card-content">
+                                            <div class="card-description">
+                                                <h2>Мандельштамовские чтения</h2>
+                                                <p>16 Января 2023</p>
                                             </div>
                                         </div>
                                     </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/february.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/february.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/february.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/february.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/february.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
+                                </div>
+                                <div class="card back">
+                                    <p class="">
+                                        К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС
+                                    </p>
+                                </div>
                             </div>
-                            <div class="events-list" style="display: none" id="march">
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/march.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
+                            <div class="l-card">
+                                <div class="card front">
+                                    <div class="card__container">
+                                        <img src="img/month/january.jpg" alt="">
+                                        <div class="card-content">
+                                            <div class="card-description">
+                                                <h2>Мандельштамовские чтения</h2>
+                                                <p>16 Января 2023</p>
                                             </div>
                                         </div>
                                     </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/march.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/march.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/march.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/march.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/march.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/march.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/march.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/march.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
+                                </div>
+                                <div class="card back">
+                                    <p class="">
+                                        К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС
+                                    </p>
+                                </div>
                             </div>
-                            <div class="events-list" style="display: none" id="april">
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/april.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
+                            <div class="l-card">
+                                <div class="card front">
+                                    <div class="card__container">
+                                        <img src="img/month/january.jpg" alt="">
+                                        <div class="card-content">
+                                            <div class="card-description">
+                                                <h2>Мандельштамовские чтения</h2>
+                                                <p>16 Января 2023</p>
                                             </div>
                                         </div>
                                     </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/april.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/april.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/april.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/april.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
+                                </div>
+                                <div class="card back">
+                                    <p class="">
+                                        К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС
+                                    </p>
+                                </div>
                             </div>
-                            <div class="events-list" style="display: none" id="may">
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/may.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
+                            <div class="l-card">
+                                <div class="card front">
+                                    <div class="card__container">
+                                        <img src="img/month/january.jpg" alt="">
+                                        <div class="card-content">
+                                            <div class="card-description">
+                                                <h2>Мандельштамовские чтения</h2>
+                                                <p>16 Января 2023</p>
                                             </div>
                                         </div>
                                     </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/may.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/may.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/may.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/may.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/may.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/may.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
+                                </div>
+                                <div class="card back">
+                                    <p class="">
+                                        К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС
+                                    </p>
+                                </div>
                             </div>
-                            <div class="events-list" style="display: none" id="june">
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/june.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
+                            <div class="l-card">
+                                <div class="card front">
+                                    <div class="card__container">
+                                        <img src="img/month/january.jpg" alt="">
+                                        <div class="card-content">
+                                            <div class="card-description">
+                                                <h2>Мандельштамовские чтения</h2>
+                                                <p>16 Января 2023</p>
                                             </div>
                                         </div>
                                     </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/june.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/june.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/june.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
+                                </div>
+                                <div class="card back">
+                                    <p class="">
+                                        К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС
+                                    </p>
+                                </div>
                             </div>
-                            <div class="events-list" style="display: none" id="july">
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/july.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
+                            <div class="l-card">
+                                <div class="card front">
+                                    <div class="card__container">
+                                        <img src="img/month/january.jpg" alt="">
+                                        <div class="card-content">
+                                            <div class="card-description">
+                                                <h2>Мандельштамовские чтения</h2>
+                                                <p>16 Января 2023</p>
                                             </div>
                                         </div>
                                     </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/july.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/july.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
+                                </div>
+                                <div class="card back">
+                                    <p class="">
+                                        К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС
+                                    </p>
+                                </div>
                             </div>
-                            <div class="events-list" style="display: none" id="august">
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/august.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/august.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/august.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/august.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/august.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="events-list" style="display: none" id="september">
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/september.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/september.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/september.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/september.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/september.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/september.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/september.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="events-list" style="display: none" id="october">
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/october.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/october.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/october.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/october.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/october.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/october.jpg" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="events-list" style="display: none" id="november">
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/november.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/november.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/november.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/november.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/november.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/november.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/november.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/november.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="events-list" style="display: none" id="december">
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/december.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/december.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/december.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/december.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/december.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/december.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                                <label class="event">
-                                    <input type="checkbox">
-                                    <div class="card card-01">
-                                        <div class="front">
-                                            <img src="img/month/december.JPG" alt="" class="event-image">
-                                            <a class="event-name">Мандельштамовские чтения</a>
-                                            <a class="event-data">16 Января 2023</a>
-                                        </div>
-                                        <div class="back">
-                                            <div class="event-description__container">
-                                                <a class="event-description">К памятной дате приурочены традиционные Мандельштамовские чтения, встреча почитателей творчества и премьера художественного-публицистического фильма «Я вижу каменное небо» Высшей школы кино и телевидения ВГУЭС. Место встречи чтецов многие годы неизменно – у памятника Осипу Мандельштаму, установленному почти 20 лет назад на территории ВГУЭС</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </label>
-                            </div>
+
+                        </div>
+                        <div class="events-list" id="Февраль">
+
+                        </div>
+                        <div class="events-list" id="Март">
+
+                        </div >
+                        <div class="events-list" id="Апрель">
+
+                        </div>
+                        <div class="events-list" id="Май">
+
+                        </div>
+                        <div class="events-list" id="Июнь">
+
+                        </div>
+                        <div class="events-list" id="Июль">
+
+                        </div>
+                        <div class="events-list" id="Август">
+
+                        </div>
+                        <div class="events-list" id="Сентябрь">
+
+                        </div>
+                        <div class="events-list" id="Октябрь">
+
+                        </div>
+                        <div class="events-list" id="Ноябрь">
+
+                        </div>
+                        <div class="events-list" id="Декабрь">
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <script type="text/javascript">
-        function toggle_visibility(id1, id2) {
-            var c = document.querySelector(".active")
-            var d = document.querySelector(".active-button")
-            var e = document.getElementById(id1);
-            var g = document.getElementById(id2);
-            if(e.style.display == 'flex')
-                console.log("hello")
-            else
-                d.classList.remove("active-button");
-                c.classList.remove("active");
-                g.classList.add("active-button");
-                c.style.display = 'none';
-                e.style.display = 'flex';
-                e.classList.add("active");
-        }
-    </script>
 </body>
 </html>
